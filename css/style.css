@@ -160,47 +160,27 @@ p {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-left: -30px;
     border-radius: 10px;
 }
 
 .logo {
-    height: 100px;
-    width: 170px;
+    height: 120px;
+    width: 150px;
     transition: all 0.3s var(--ease-smooth);
     
 }
 
 .navbar.scrolled .logo {
-    height: 100px;
-    width: 150px;
-    margin-left: -10px;
-}
-.navbar-brand2 {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    border-radius: 10px;
-    margin-right: -25px;
-}
-
-.logo2 {
-    height: 100px;
-    width: 120px;
-    transition: all 0.3s var(--ease-smooth);
-    
-}
-
-.navbar.scrolled .logo2 {
-    height: 100px;
+    height: 120px;
     width: 150px;
 }
+
 
 .navbar-nav {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-left: -30px;
+
 }
 
 .nav-item {
@@ -784,15 +764,27 @@ p {
 .partner-logo {
     height: 80px;
     width: auto;
-    opacity: 0.7;
-    filter: grayscale(100%);
+    opacity: 0.85;
     transition: all 0.4s var(--ease-smooth);
+    animation: floatingPartner 3s var(--ease-smooth) infinite;
+    filter: drop-shadow(0 4px 12px rgba(45, 80, 22, 0.15));
+    cursor: pointer;
 }
 
 .partner-logo:hover {
     opacity: 1;
-    filter: grayscale(0%);
     transform: scale(1.1);
+    filter: drop-shadow(0 8px 24px rgba(244, 208, 63, 0.3));
+    animation: floatingPartner 2s var(--ease-smooth) infinite;
+}
+
+@keyframes floatingPartner {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+.partner-logo:first-child {
+    height: 110px;
 }
 
 /* ============================================
@@ -1450,6 +1442,7 @@ p {
     
     .partner-logo {
         height: 40px;
+        animation: floatingPartner 3s var(--ease-smooth) infinite;
     }
     
     .btn {
