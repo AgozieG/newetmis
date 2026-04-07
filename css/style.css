@@ -729,20 +729,30 @@ p {
 }
 
 .indexing-badge {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(45, 80, 22, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(45, 80, 22, 0.2);
     border-radius: 12px;
     padding: 1rem 1.5rem;
-    color: var(--white);
+    color: var(--dark-gray);
     font-weight: 600;
     transition: all 0.3s var(--ease-spring);
 }
 
+.indexing-section .indexing-badge {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+}
+
 .indexing-badge:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(45, 80, 22, 0.2);
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.indexing-section .indexing-badge:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* ============================================
